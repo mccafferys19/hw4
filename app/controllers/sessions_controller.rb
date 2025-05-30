@@ -18,12 +18,12 @@ class SessionsController < ApplicationController
         redirect_to "/places?logged_in_user_id=#{@user["id"]}" # http is stateless, so we have to define this specific user state
       else
         flash["notice"] = "Incorrect Password."
-        redirect_to "/sessions"  
+        redirect_to "/login"  
       end
     else
     # 4. if the user doesn't exist or they don't know their password -> login fails
       flash["notice"] = "User not found."
-      redirect_to "/sessions"  
+      redirect_to "/login"  
     end
   end
 
