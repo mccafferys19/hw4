@@ -29,4 +29,4 @@ production:
   adapter: postgresql
   database: hw4_production
   username: hw4_app
-  password: <%= ENV["HW4_PASSWORD"] %>
+  password: <%= ENV["HW4_DATABASE_PASSWORD"] %>
